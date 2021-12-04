@@ -7,7 +7,6 @@ import cookieParser from 'cookie-parser';
 import fileupload from 'express-fileupload';
 import cloudinary from 'cloudinary';
 import cors from 'cors';
-import path from 'path';
 
 //Internal Updates
 import connect from './config/db';
@@ -38,6 +37,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'https://portfolio-1-frontend.vercel.app',
+      'https://portfolio-1-admin-dashboard.vercel.app/login',
     ],
     credentials: true,
   })
