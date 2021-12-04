@@ -35,7 +35,10 @@ app.use(
 app.use(express.json({ limit: '50MB' }));
 app.use(
   cors({
-    origin: ['http://localhost:3000'],
+    origin: [
+      'http://localhost:3000',
+      'https://portfolio-1-frontend.vercel.app',
+    ],
     credentials: true,
   })
 );
