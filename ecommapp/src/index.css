@@ -1,0 +1,22 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+
+.right-btn{
+  @apply text-lg cursor-pointer ml-10 font-light
+}
+
+.announcement-banner{
+  @apply h-11 bg-green-600 text-white text-lg font-normal flex justify-center items-center tracking-wider
+}
+
+.arrow-btn{
+  @apply w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center absolute cursor-pointer
+}
+
+@tailwind utilities;
+
+html{
+  box-sizing: border-box;
+}
+
