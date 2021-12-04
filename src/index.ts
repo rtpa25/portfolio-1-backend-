@@ -35,7 +35,7 @@ app.use(
 app.use(express.json({ limit: '50MB' }));
 app.use(
   cors({
-    origin: ['https://ecomm-app-theta.vercel.app', 'http://localhost:3000'],
+    origin: ['http://localhost:3000'],
     credentials: true,
   })
 );
@@ -59,14 +59,7 @@ cloudinary.v2.config({
   secure: true,
 });
 
-app.use(express.static(path.join(__dirname, '/ecommapp/build')));
-
-app.get('*', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '/ecommapp/build', 'index.html'));
-});
-
 app.listen(process.env.PORT || 5000, async () => {
   logger.info(`listening to port ${process.env.PORT}`);
-  logger.info('THIS IS A TEST DLKFJSJSDFKLDSFDKLFJSKFJSDFJSDLKFJ');
   await connect();
 });

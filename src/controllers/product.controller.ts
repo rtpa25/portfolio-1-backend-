@@ -11,10 +11,6 @@ import { CustomReq } from '../utils/UserCustomReqObject';
 
 const cloudinary = Cloudinary.v2;
 
-interface categories {
-  $in: string[];
-}
-
 //-----GET_SINGLE_PRODUCT CONTROLLER ----//
 export const getSingleProduct = async (
   req: CustomReq,
@@ -52,17 +48,12 @@ export const getAllProduct = async (
 ) => {
   try {
     const qNew = req.query.new;
-    console.log(qNew);
-
     const qCategory = req.query.category;
-    console.log(qCategory);
-    console.log(1);
 
     let products;
     if (qNew) {
       products = await Product.find().sort({ createdAt: -1 }).limit(1);
     } else if (qCategory) {
-      console.log(5);
       products = await Product.find({
         categories: {
           $in: qCategory as string[],
