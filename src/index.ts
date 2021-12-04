@@ -37,7 +37,7 @@ app.use(
     origin: [
       'http://localhost:3000',
       'https://portfolio-1-frontend.vercel.app',
-      'https://portfolio-1-admin-dashboard.vercel.app/login',
+      'https://portfolio-1-admin-dashboard.vercel.app',
     ],
     credentials: true,
   })
