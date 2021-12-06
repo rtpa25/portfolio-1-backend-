@@ -2,7 +2,7 @@
 
 //Dependencies
 import 'dotenv/config';
-import express, { Request, Response } from 'express';
+import express from 'express';
 import cookieParser from 'cookie-parser';
 import fileupload from 'express-fileupload';
 import cloudinary from 'cloudinary';
