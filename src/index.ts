@@ -38,6 +38,8 @@ app.use(
       'http://localhost:3000',
       'https://portfolio-1-frontend.vercel.app',
       'https://portfolio-1-admin-dashboard.vercel.app',
+      'https://portfolio-1-frontend-at9lytyp2-rtpa25.vercel.app',
+      'https://portfolio-1-admin-dashboard-91evvl4ya-rtpa25.vercel.app',
     ],
     credentials: true,
   })
